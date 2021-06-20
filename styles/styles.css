@@ -1,5 +1,6 @@
 :root {
     --boxColor: rgba(0, 191, 255, .5);
+    --rotateSpeed: 30s;
 }
 body {
     background-color: black;
@@ -11,11 +12,31 @@ body {
     perspective: 10em; /* perspective is setting the viewing distance. Anything below 4 causes pretty serious distorion of the image from this perspective origin */
     perspective-origin: 50% calc(50% - 2em);
 }
+@keyframes roomSpin {
+    to {
+        transform: rotateY(360deg);
 
+}
+    
+}
 .scene {
     position: relative;
     transform-style: preserve-3d;
-}
+    animation: roomSpin var(--rotateSpeed) infinite linear;
+    -webkit-animation: roomSpin var(--rotateSpeed) infinite linear;
+    
+    
+    
+    @-moz-keyframes roomSpin { 
+        to { 
+            transform: rotateY(360deg); 
+            }        
+        }
+        
+    
+    }
+
+
 
 .ball {
     width: 1em;
