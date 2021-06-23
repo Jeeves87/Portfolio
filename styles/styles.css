@@ -27,20 +27,22 @@ body {
         transform: rotateY(360deg);
 
 }
-    
+
 }
+
+@keyframes ballSpin {
+    to {
+        transform: rotateY(360deg);
+    }
+}
+    
+
 .scene {
     position: relative;
     transform-style: preserve-3d;
     animation: roomSpin var(--rotateSpeed) infinite linear;
     -webkit-animation: roomSpin var(--rotateSpeed) infinite linear;
             
-    @-moz-keyframes roomSpin { 
-        to { 
-            transform: rotateY(360deg); 
-            }        
-        }
-        
     
     }
 
@@ -55,10 +57,10 @@ body {
     left: -.5em;
     bottom: 1em;
     background-image: radial-gradient( circle at top, lightgreen, 30%, #000);
-    animation: roomSpin var(--rotateSpeed) infinite linear reverse;
-    -webkit-animation: roomSpin var(--rotateSpeed) infinite linear reverse;
+    animation: ballSpin var(--rotateSpeed) infinite linear reverse;
+    -webkit-animation: ballSpin var(--rotateSpeed) infinite linear reverse;
             
-    @-moz-keyframes roomSpin { 
+    @-moz-keyframes ballSpin { 
         to { 
             transform: rotateY(360deg); 
             }        
