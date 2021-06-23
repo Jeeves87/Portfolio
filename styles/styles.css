@@ -2,6 +2,16 @@
     --boxColor: rgba(0, 191, 255, .5);
     --rotateSpeed: 30s;
 }
+
+/* header {
+    background-color: red;
+    width: 2em;
+    height: 2em;
+    position: absolute;
+    justify-content: center;
+    font-size: 5em;
+    z-index: 1;
+} */
 body {
     background-color: black;
     min-height: 100vh;
@@ -9,7 +19,7 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 50px; /* font size is interesting here. I am using it without text specifically to use it as an easily scalable unit to design the box. */
-    perspective: 10em; /* perspective is setting the viewing distance. Anything below 4 causes pretty serious distorion of the image from this perspective origin */
+    perspective: 15em; /* perspective is setting the viewing distance. Anything below 4 causes pretty serious distorion of the image from this perspective origin */
     perspective-origin: 50% calc(50% - 2em);
 }
 @keyframes roomSpin {
@@ -24,9 +34,7 @@ body {
     transform-style: preserve-3d;
     animation: roomSpin var(--rotateSpeed) infinite linear;
     -webkit-animation: roomSpin var(--rotateSpeed) infinite linear;
-    
-    
-    
+            
     @-moz-keyframes roomSpin { 
         to { 
             transform: rotateY(360deg); 
@@ -47,8 +55,18 @@ body {
     left: -.5em;
     bottom: 1em;
     background-image: radial-gradient( circle at top, lightgreen, 30%, #000);
+    animation: roomSpin var(--rotateSpeed) infinite linear reverse;
+    -webkit-animation: roomSpin var(--rotateSpeed) infinite linear reverse;
+            
+    @-moz-keyframes roomSpin { 
+        to { 
+            transform: rotateY(360deg); 
+            }        
+        }
+        
+    
+    }
 
-}
 
 .ballShadow {
     position: absolute;
@@ -112,7 +130,7 @@ body {
     transform: translate(-50%, -50%) rotateX(90deg);  /* this part is cool. takes the gradiant and turns it on its side. without additional code it looks like it disappears but actually is just a 2d image rotated into the third dimension */
     width: 5em;
     height: 5em;
-    background-image: radial-gradient(#0000, #000 75%), repeating-conic-gradient(from 45deg, #111 0deg 90deg, #222 90deg 180deg);
+    background-image: radial-gradient(#0000, #000 75%), repeating-conic-gradient(from 45deg, #111 0deg 90deg, rgb(146, 145, 145) 90deg 180deg);
     background-size: 100%, 1em 1em;
     position: absolute;
 }
