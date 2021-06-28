@@ -1,17 +1,9 @@
 :root {
     --boxColor: rgba(0, 191, 255, .5);
     --rotateSpeed: 30s;
+    --bounceSpeed: 1.5s;
 }
 
-/* header {
-    background-color: red;
-    width: 2em;
-    height: 2em;
-    position: absolute;
-    justify-content: center;
-    font-size: 5em;
-    z-index: 1;
-} */
 body {
     background-color: black;
     min-height: 100vh;
@@ -35,6 +27,16 @@ body {
         transform: rotateY(360deg);
     }
 }
+
+@keyframes ballBounce {
+    0%, 100% { bottom: 1em; }
+    50% { bottom: 3em; animation-timing-function: ease-in; }
+}
+
+@keyframes ballShadow {
+    0%, 100% { transform: scale(1); opacity: 1;}
+    50% {transform: scale(2); animation-timing-function: ease-in; opacity: 0.5}
+}
     
 
 .scene {
@@ -42,9 +44,7 @@ body {
     transform-style: preserve-3d;
     animation: roomSpin var(--rotateSpeed) infinite linear;
     -webkit-animation: roomSpin var(--rotateSpeed) infinite linear;
-            
-    
-    }
+        }
 
 
 
@@ -57,25 +57,24 @@ body {
     left: -.5em;
     bottom: 1em;
     background-image: radial-gradient( circle at top, lightgreen, 30%, #000);
-    animation: ballSpin var(--rotateSpeed) infinite linear reverse;
-    -webkit-animation: ballSpin var(--rotateSpeed) infinite linear reverse;
-            
-    @-moz-keyframes ballSpin { 
-        to { 
-            transform: rotateY(360deg); 
-            }        
-        }
-        
-    
+    animation:
+     ballSpin var(--rotateSpeed) infinite linear reverse,
+     ballBounce var(--bounceSpeed) infinite ease-out;
+    -webkit-animation: 
+     ballSpin var(--rotateSpeed) infinite linear reverse,
+     ballBounce var(--bounceSpeed) infinite ease-out;
+       
     }
+
 
 
 .ballShadow {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 191, 255, .5);
     background-image: radial-gradient(#0007, #0000 50%);
+    animation:
+        ballShadow var(--bounceSpeed) infinite ease-out;
 }
 
 .cube {
