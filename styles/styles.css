@@ -4,23 +4,26 @@
     --bounceSpeed: 1.5s;
 }
 
+
 body {
     background-color: black;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
     font-size: 50px; /* font size is interesting here. I am using it without text specifically to use it as an easily scalable unit to design the box. */
     perspective: 15em; /* perspective is setting the viewing distance. Anything below 4 causes pretty serious distorion of the image from this perspective origin */
     perspective-origin: 50% calc(50% - 2em);
 }
+
+/* Animation Section */
 @keyframes roomSpin {
     to {
         transform: rotateY(360deg);
-
+    }
 }
 
-}
 
 @keyframes ballSpin {
     to {
@@ -28,24 +31,27 @@ body {
     }
 }
 
+
 @keyframes ballBounce {
-    0%, 100% { bottom: 1em; }
-    50% { bottom: 3em; animation-timing-function: ease-in; }
+    0%, 100% {bottom: 0.5em;}
+    50% {bottom: 3em; animation-timing-function: ease-in;
+    }
 }
+
 
 @keyframes ballShadow {
-    0%, 100% { transform: scale(1); opacity: 1;}
-    50% {transform: scale(2); animation-timing-function: ease-in; opacity: 0.5}
+    0%, 8%, 93.5%, 100% { transform: scale(1); opacity: 1}
+    50% {transform: scale(2); animation-timing-function: ease-in; opacity: 0.5
+    }
 }
     
-
+/* Classes */
 .scene {
     position: relative;
     transform-style: preserve-3d;
     animation: roomSpin var(--rotateSpeed) infinite linear;
     -webkit-animation: roomSpin var(--rotateSpeed) infinite linear;
-        }
-
+}
 
 
 .ball {
@@ -64,8 +70,7 @@ body {
      ballSpin var(--rotateSpeed) infinite linear reverse,
      ballBounce var(--bounceSpeed) infinite ease-out;
        
-    }
-
+}
 
 
 .ballShadow {
@@ -75,17 +80,26 @@ body {
     background-image: radial-gradient(#0007, #0000 50%);
     animation:
         ballShadow var(--bounceSpeed) infinite ease-out;
+    -webkit-animation:
+        ballShadow var(--bounceSpeed) infinite ease-out;
 }
+
 
 .cube {
     width: 2em;
     height: 2em;
     position: absolute;
     transform-style: preserve-3d;
-    top: -1em;
+    bottom: -1em;
     left: -1em;
-          
+    animation: cubeSquish var(--bounceSpeed) infinite linear;
 }
+
+@keyframes cubeSquish {
+    0%, 100% {height: 1.5em;}
+    8%, 93.5% {height: 2em;}
+}
+
 /* it is probably too inside baseball to ask. But the guide I'm learning from had these classes imbedded within the above rule and vscode did not like it at all. I tried fiddling with it and couldn't get it to work at all. So I had to remove it out and make it a separate rule and this seems to be working fine but I'd like to know why there is a difference? It appears they are using an SCSS file. Should I be doing that instead? */
 .right, .left, .front, .back {
     position: absolute;
@@ -95,18 +109,28 @@ body {
     box-shadow: 0 0 0.5em #000a inset;
     
 }
+
+
 .front { 
     transform: translateZ(1em);
 }
+
+
 .left {
     transform: rotateY(90deg) translateZ(1em);
 }
+
+
 .right {
     transform: rotateY(-90deg) translateZ(1em);
 }
+
+
 .back {
     transform: translateZ(-1em);
 }
+
+
 .top {
     position: absolute;
     width: 2em;
@@ -114,6 +138,7 @@ body {
     background: var(--boxColor);
     transform: translateY(-50%) rotateX(90deg);
 }
+
 
 .bottom {
     position: absolute;
