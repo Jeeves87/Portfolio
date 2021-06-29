@@ -1,12 +1,12 @@
 :root {
-    --boxColor: rgba(0, 191, 255, .5);
+    --boxColor: hsla(195, 100%, 50%, 0.5);
     --rotateSpeed: 30s;
     --bounceSpeed: 1.5s;
 }
 
 
 body {
-    background-color: black;
+    background-color: hsl(0, 0%, 0%);
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -17,33 +17,6 @@ body {
     perspective-origin: 50% calc(50% - 2em);
 }
 
-/* Animation Section */
-@keyframes roomSpin {
-    to {
-        transform: rotateY(360deg);
-    }
-}
-
-
-@keyframes ballSpin {
-    to {
-        transform: rotateY(360deg);
-    }
-}
-
-
-@keyframes ballBounce {
-    0%, 100% {bottom: 0.5em;}
-    50% {bottom: 3em; animation-timing-function: ease-in;
-    }
-}
-
-
-@keyframes ballShadow {
-    0%, 8%, 93.5%, 100% { transform: scale(1); opacity: 1}
-    50% {transform: scale(2); animation-timing-function: ease-in; opacity: 0.5
-    }
-}
     
 /* Classes */
 .scene {
@@ -51,6 +24,12 @@ body {
     transform-style: preserve-3d;
     animation: roomSpin var(--rotateSpeed) infinite linear;
     -webkit-animation: roomSpin var(--rotateSpeed) infinite linear;
+}
+
+@keyframes roomSpin {
+    to {
+        transform: rotateY(360deg);
+    }
 }
 
 
@@ -62,14 +41,25 @@ body {
     position: absolute;
     left: -.5em;
     bottom: 1em;
-    background-image: radial-gradient( circle at top, lightgreen, 30%, #000);
+    background-image: radial-gradient( circle at top, hsl(120, 73%, 75%), 30%, hsl(0, 0%, 0%));
     animation:
      ballSpin var(--rotateSpeed) infinite linear reverse,
      ballBounce var(--bounceSpeed) infinite ease-out;
     -webkit-animation: 
      ballSpin var(--rotateSpeed) infinite linear reverse,
      ballBounce var(--bounceSpeed) infinite ease-out;
-       
+}
+
+@keyframes ballSpin {
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+@keyframes ballBounce {
+    0%, 100% {bottom: 0.5em;}
+    50% {bottom: 3em; animation-timing-function: ease-in;
+    }
 }
 
 
@@ -77,11 +67,17 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-image: radial-gradient(#0007, #0000 50%);
+    background-image: radial-gradient(hsla(0, 0%, 0%, 0.467), hsla(0, 0%, 0%, 0) 50%);
     animation:
         ballShadow var(--bounceSpeed) infinite ease-out;
     -webkit-animation:
         ballShadow var(--bounceSpeed) infinite ease-out;
+}
+
+@keyframes ballShadow {
+    0%, 8%, 93.5%, 100% { transform: scale(1); opacity: 1}
+    50% {transform: scale(2); animation-timing-function: ease-in; opacity: 0.5
+    }
 }
 
 
@@ -90,7 +86,7 @@ body {
     height: 2em;
     position: absolute;
     transform-style: preserve-3d;
-    bottom: -1em;
+    bottom: -.99em;
     left: -1em;
     animation: cubeSquish var(--bounceSpeed) infinite linear;
 }
@@ -106,8 +102,7 @@ body {
     width: 100%;
     height: 100%;
     background: var( --boxColor);
-    box-shadow: 0 0 0.5em #000a inset;
-    
+    box-shadow: 0 0 0.5em hsla(0, 0%, 0%, 0.667) inset;
 }
 
 
@@ -156,7 +151,7 @@ body {
     transform: translate(-50%, -50%) rotateX(90deg);  /* this part is cool. takes the gradiant and turns it on its side. without additional code it looks like it disappears but actually is just a 2d image rotated into the third dimension */
     width: 5em;
     height: 5em;
-    background-image: radial-gradient(#0000, #000 75%), repeating-conic-gradient(from 45deg, #111 0deg 90deg, rgb(146, 145, 145) 90deg 180deg);
+    background-image: radial-gradient(hsla(0, 0%, 0%, 0), hsl(0, 0%, 0%) 75%), repeating-conic-gradient(from 45deg, hsl(0, 0%, 7%) 0deg 90deg, hsl(0, 0%, 57%) 90deg 180deg);
     background-size: 100%, 1em 1em;
     position: absolute;
 }
