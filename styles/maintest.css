@@ -64,7 +64,7 @@ img {
   position: absolute;
   font-weight: bold;
   top: 0;
-  right: 0.5em;
+  right: 1em;
   background: rgba(85, 84, 84, 0.5);
   padding: 0.5em 0.5em 0.75em;
   clip-path: circle(92.2% at 50% 0);
@@ -83,6 +83,7 @@ img {
   right: 0;
   z-index: -1;
   transform: scale(0.2, 0.9);
+  opacity: 0;
 }
 
 @keyframes projectName {
@@ -111,6 +112,7 @@ img {
   animation: projectName 250ms forwards;
 }
 .project:hover .background {
+  opacity: 1;
   transition: transform 250ms cubic-bezier(0.21, 1, 0.81, 1.01), opacity 100ms linear;
   transform: scale(1.4, 1.2);
 }
