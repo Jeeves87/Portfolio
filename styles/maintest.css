@@ -21,6 +21,10 @@ body {
   color: var(--clr-light);
 }
 
+a:link, a:visited, a:hover {
+  color: var(--clr-light);
+}
+
 h1,
 h2,
 h3,
