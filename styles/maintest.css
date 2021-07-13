@@ -15,6 +15,7 @@
   --clr-accent: hsl(14, 100%, 44%);
   --clr-accent-dark: hsl(14, 100%, 32%);
   --clr-secondary: hsl(217, 100%, 32%);
+  --clr-logo: hsl(265, 91%, 22%);
 }
 
 .app-header {
@@ -56,6 +57,7 @@ a:visited {
 img {
   max-width: 100%;
   text-align: center;
+  background-color: var(--clr-logo);
 }
 
 /* .container {
