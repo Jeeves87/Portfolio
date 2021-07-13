@@ -100,7 +100,7 @@ img {
   position: absolute;
   font-weight: bold;
   top: 0;
-  right: 1em;
+  right: 1.1em;
   background: rgba(85, 84, 84, 0.5);
   padding: 0.5em 0.5em 0.75em;
   clip-path: circle(92.2% at 50% 0);
@@ -182,7 +182,7 @@ img {
 }
 
 @media (mid-width: 768px) {
-  #app-header {
+  app-header {
     width: 100%;
     background-color: yellow;
   }
