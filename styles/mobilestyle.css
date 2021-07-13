@@ -149,6 +149,7 @@ body {
 
 #splash.fade {
   opacity: 0;
+  z-index: -1;
 }
 
 @media (min-width: 768px) {
