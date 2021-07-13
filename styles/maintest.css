@@ -12,16 +12,21 @@
   --clr-secondary: hsl(217, 100%, 32%);
 }
 
+.nav {
+  color: var(--clr-light);
+  background-color: var(--clr-accent);
+  position: absolute;
+  top: 10em;
+  left: 0;
+  /* z-index: -unset; */
+}
+
 body {
   font-family: sans-serif;
   min-height: 100vh;
   display: grid;
   place-items: center;
   background: var(--clr-dark);
-  color: var(--clr-light);
-}
-
-a:link, a:visited, a:hover {
   color: var(--clr-light);
 }
 
@@ -32,58 +37,75 @@ p {
   margin: 0;
 }
 
+.app-header {
+  font-family: Roboto, sans-serif;
+}
+
+a:link,
+a:hover,
+a:visited {
+  text-decoration: none;
+  color: var(--clr-light);
+}
+
 img {
   max-width: 100%;
   text-align: center;
 }
 
-.project {
+.content {
+  display: flex;
+}
+
+.content .project {
   position: relative;
   width: 8.5em;
   /* em*16=pixels */
+  flex: 1;
+  margin: 2px;
 }
 
-.front {
+.content .front {
   transition: 250ms;
   display: inline-block;
 }
-.front .projectStats {
+.content .front .projectStats {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.front .name {
+.content .front .name {
   text-align: left;
   margin: 0em;
 }
-.front .thumbnail {
+.content .front .thumbnail {
   border-radius: 25px;
 }
 
-.banner {
+.content .banner {
   position: absolute;
   font-weight: bold;
   top: 0;
-  right: 1em;
+  right: 0.5em;
   background: rgba(85, 84, 84, 0.5);
   padding: 0.5em 0.5em 0.75em;
   clip-path: circle(92.2% at 50% 0);
 }
 
-.back {
-  display: none;
+.content .back {
+  opacity: 0;
 }
 
-.background {
+.content .background {
   position: absolute;
   background: #234;
+  opacity: 0;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   z-index: -1;
   transform: scale(0.2, 0.9);
-  opacity: 0;
 }
 
 @keyframes projectName {
@@ -105,16 +127,20 @@ img {
     opacity: 1;
   }
 }
-.project:hover .front {
+.content .project:hover .front {
   transform: translateY(-30%) scale(0.9);
 }
-.project:hover .front .name {
+.content .project:hover .front .name {
   animation: projectName 250ms forwards;
 }
-.project:hover .background {
+.content .project:hover .background {
   opacity: 1;
-  transition: transform 250ms cubic-bezier(0.21, 1, 0.81, 1.01), opacity 100ms linear;
+  transition: transform 250ms cubic-bezier(0.21, 1, 0.81, 1.01),
+    opacity 100ms linear;
   transform: scale(1.4, 1.2);
+}
+.content .project:hover .back {
+  opacity: 1;
 }
 
 /*# sourceMappingURL=maintest.css.map */
