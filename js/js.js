@@ -1,4 +1,3 @@
-setTimeout = (() => {
-    document.getElementbyId('splash').classList.toggle
-    ('fade');
-}, 2000);
+    setTimeout(() => {
+        document.getElementById("splash").classList.add("fade");
+      }, 2000);
