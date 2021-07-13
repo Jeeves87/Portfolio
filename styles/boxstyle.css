@@ -1,3 +1,5 @@
+/* Not to take away from what I consider the incredible accomplishment of writing all of this before I understood SCSS and hacking it together over the course of days; I want to make it clear: I do not take credit for the design of this. I merely followed a youtube guide by Kevin Powell and Amit Sheen of CSTricks.  */
+
 :root {
   --boxColor: hsla(195, 100%, 50%, 0.5);
   --rotateSpeed: 30s;
@@ -115,7 +117,6 @@ body {
   }
 }
 
-/* it is probably too inside baseball to ask. But the guide I'm learning from had these classes imbedded within the above rule and vscode did not like it at all. I tried fiddling with it and couldn't get it to work at all. So I had to remove it out and make it a separate rule and this seems to be working fine but I'd like to know why there is a difference? It appears they are using an SCSS file. Should I be doing that instead? */
 .right,
 .left,
 .front,
