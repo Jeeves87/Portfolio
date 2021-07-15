@@ -72,9 +72,9 @@ img {
   margin: 25px;
 }
 
-.content .project:only-child {
+/* .content .project:only-child {
   padding: 5px;
-}
+} */
 
 .content .front {
   transition: 250ms;
