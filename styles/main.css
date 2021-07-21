@@ -226,8 +226,8 @@ img {
 /* Media Queries */
 /* Desktop / Nonmobile */
 @media (min-width: 813px) {
-  .content {
-    padding-top: 7.6rem;
+  .app-header p {
+    padding-bottom: 36.6rem;
   }
 
   .content .project:hover .front {
@@ -252,7 +252,7 @@ img {
 /* Mobile */
 @media only screen and (min-device-width: 360px) and (max-device-width: 415px) {
   .bottom-half p {
-    padding-bottom: 16rem;
+    padding-bottom: 7rem;
   }
   .content {
     margin-top: 40px;
