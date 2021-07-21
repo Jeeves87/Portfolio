@@ -252,7 +252,7 @@ img {
 /* Mobile */
 @media only screen and (min-device-width: 360px) and (max-device-width: 415px) {
   .bottom-half p {
-    padding-bottom: 7rem;
+    padding-bottom: 16rem;
   }
   .content {
     margin-top: 40px;
