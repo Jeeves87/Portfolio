@@ -22,119 +22,135 @@
     </div>
     <header class="app-header">
       <div class="container">
-        <img
-          src="img/reeveslogotransparent.png"
-          alt="Reeves Logo"
-          class="logo"
-        />
-        <p>
-          A collection of projects I've worked on while<br />
-          learning HTML, CSS, and JavaScript.
-        </p>
+        <div class="top-half">
+          <img
+            src="img/reeveslogotransparent.png"
+            alt="Reeves Logo"
+            class="logo"
+          />
+        </div>
+        <div class="bottom-half">
+          <p>
+            A collection of projects I've worked on while<br />
+            learning HTML, CSS, and JavaScript. <br />
+            <!-- <i class="fas fa-arrow-down"></i> -->
+          </p>
+
+          <div class="background"></div>
+        </div>
       </div>
     </header>
     <div class="content">
       <!-- Start of buttons. -->
-      <a
-        class="projectLink"
-        style="text-decoration: none"
-        href="https://jeeves87.github.io/Portfolio.io/box.html"
-      >
+      <div class="itemcontainer">
+        <a
+          class="projectLink"
+          style="text-decoration: none"
+          href="https://jeeves87.github.io/Portfolio.io/box.html"
+        >
+          <div class="project">
+            <div class="banner">1</div>
+            <div class="front">
+              <img
+                class="thumbnail"
+                src="img/thumb1.png"
+                alt="Picture of my first project"
+              />
+              <h3 class="name">The CSS Box Model</h3>
+              <div class="projectStats">
+                <p class="language">CSS</p>
+              </div>
+            </div>
+            <div class="back">
+              <div class="dateMade">
+                <p class="date">Created: <span>June, 2021</span></p>
+              </div>
+            </div>
+            <div class="background"></div>
+          </div>
+        </a>
+      </div>
+      <!-- End of Project 1 -->
+      <div class="itemcontainer2">
+        <a
+          class="projectLink"
+          style="text-decoration: none"
+          href="mobileclone.html"
+        >
+          <div class="project">
+            <div class="banner">2</div>
+            <div class="front">
+              <img
+                class="thumbnail"
+                src="img/thumb2.png"
+                alt="Picture of my second project"
+              />
+              <h3 class="name">CVS Mobile Clone Project</h3>
+              <div class="projectStats">
+                <p class="language">HTML, CSS, JavaScript</p>
+              </div>
+            </div>
+            <div class="back">
+              <div class="dateMade">
+                <p class="date">Created: <span>July, 2021</span></p>
+              </div>
+            </div>
+            <div class="background"></div>
+          </div>
+        </a>
+      </div>
+
+      <!-- End of Project 2 -->
+      <div class="itemcontainer3">
         <div class="project">
-          <div class="banner">1</div>
+          <div class="banner">3</div>
           <div class="front">
             <img
               class="thumbnail"
               src="img/thumb1.png"
               alt="Picture of my first project"
             />
-            <h3 class="name">The CSS Box Model</h3>
+            <h3 class="name">Future Project</h3>
             <div class="projectStats">
-              <p class="language">CSS</p>
+              <p class="language">Language: TBD</p>
             </div>
           </div>
           <div class="back">
             <div class="dateMade">
-              <p class="date">Created: <span>June, 2021</span></p>
+              <p class="date">Created: <span>Future</span></p>
             </div>
           </div>
           <div class="background"></div>
         </div>
-      </a>
-      <!-- End of Project 1 -->
-      <a
-        class="projectLink"
-        style="text-decoration: none"
-        href="mobileclone.html"
-      >
+      </div>
+      <!-- End of Project 3 -->
+      <div class="itemcontainer4">
         <div class="project">
-          <div class="banner">2</div>
+          <div class="banner">4</div>
           <div class="front">
             <img
               class="thumbnail"
-              src="img/thumb2.png"
-              alt="Picture of my second project"
+              src="img/thumb1.png"
+              alt="Picture of my third project"
             />
-            <h3 class="name">CVS Mobile Clone Project</h3>
+            <h3 class="name">Future Project</h3>
             <div class="projectStats">
-              <p class="language">HTML, CSS, JavaScript</p>
+              <p class="language">Language: TBD</p>
             </div>
           </div>
           <div class="back">
             <div class="dateMade">
-              <p class="date">Created: <span>July, 2021</span></p>
+              <p class="date">Created: <span>Future</span></p>
             </div>
           </div>
           <div class="background"></div>
         </div>
-      </a>
-      <!-- End of Project 2 -->
-      <div class="project">
-        <div class="banner">3</div>
-        <div class="front">
-          <img
-            class="thumbnail"
-            src="img/thumb1.png"
-            alt="Picture of my first project"
-          />
-          <h3 class="name">Future Project</h3>
-          <div class="projectStats">
-            <p class="language">Language: TBD</p>
-          </div>
-        </div>
-        <div class="back">
-          <div class="dateMade">
-            <p class="date">Created: <span>Future</span></p>
-          </div>
-        </div>
-        <div class="background"></div>
-      </div>
-      <!-- End of Project 3 -->
-      <div class="project">
-        <div class="banner">4</div>
-        <div class="front">
-          <img
-            class="thumbnail"
-            src="img/thumb1.png"
-            alt="Picture of my third project"
-          />
-          <h3 class="name">Future Project</h3>
-          <div class="projectStats">
-            <p class="language">Language: TBD</p>
-          </div>
-        </div>
-        <div class="back">
-          <div class="dateMade">
-            <p class="date">Created: <span>Future</span></p>
-          </div>
-        </div>
-        <div class="background"></div>
       </div>
       <!-- End of Project 4 -->
       <!-- End of buttons -->
     </div>
-    <footer id="footer">
-      <div class="footer-container">
+    <div class="footer-container">
+      <footer id="footer">
         <ul>
           <a href="#">
             <li>Home</li>
@@ -142,8 +158,8 @@
           <li>About</li>
           <li class="Contact">Contact</li>
         </ul>
-      </div>
-    </footer>
+      </footer>
+    </div>
     <!-- End of content -->
   </body>
 </html>

@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed");
 
-/* html {
+html {
   scroll-behavior: smooth;
-} */
+}
 
 body {
   font-family: "Roboto Condensed", sans-serif;

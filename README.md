@@ -1,6 +1,7 @@
 # Portfolio.io
 
-This is my main portfolio/project page for Code Louisville. It currently consists of a main page, index.html, with further projects or tutorials I found interesting and hopefully revealing of the kind of programmer I desire to be.
+This is my main portfolio/project page for Code Louisville. It currently consists of a main page, index.html, and several other pages I have done follow along tutorials on. index.html should meet all requirements by itself. The other pages are the result of lessons I have followed on youtube for educational purposes.
+box.html is from following Kevin Powell and Amit Sheens
 The linked projects are the result of following tutorials and other follow-along style educational videos that I have either improved, fixed, or manipulated in some way.
 **Requirements**
 [] 2 Media Queries that create a better layout/user experience
