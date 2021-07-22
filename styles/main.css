@@ -258,9 +258,9 @@ img {
     padding-bottom: 6.6rem;
   } */
 
-  .bottom-half p {
-    background-color: yellow;
-  }
+  /* .bottom-half p {
+    /* background-color: yellow; */
+
   .content .project:hover .front {
     transform: translateY(-15%) scale(0.8);
   }
