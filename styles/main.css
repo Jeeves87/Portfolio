@@ -228,7 +228,6 @@ img {
     margin-top: 40px;
     width: 100%;
     width: 100vw;
-    flex-grow: 1;
     flex-direction: column;
     justify-content: center;
     justify-items: center;
@@ -241,7 +240,7 @@ img {
   }
 
   .project {
-    flex-grow: 1;
+    flex-grow: 1 300px;
   }
 
   .content .back {
@@ -253,13 +252,20 @@ img {
   } */
 }
 
-@media (min-width: 813px) {
+@media (min-width: 500px) {
   /* .app-header p {
     padding-bottom: 6.6rem;
   } */
 
   /* .bottom-half p {
     /* background-color: yellow; */
+
+  .content {
+    justify-content: space-around;
+  }
+  .content .back {
+    opacity: 0;
+  }
 
   .content .project:hover .front {
     transform: translateY(-15%) scale(0.8);
