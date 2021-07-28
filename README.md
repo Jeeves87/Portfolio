@@ -4,7 +4,10 @@ This is my main portfolio/project page for Code Louisville. index.html is the fo
 
 1. **Requirements**
 
--[x] 2 Media Queries that create a better layout/user experience -[x] Project is uploaded to gitHub, with at least 5 commits -[x] Readme file which explains features used for consideration -[x] One feature from CSS list: - Create original CSS animation
+[x] 2 Media Queries that create a better layout/user experience
+[x] Project is uploaded to gitHub, with at least 5 commits
+[x] Readme file which explains features used for consideration
+[x] One feature from CSS list: - Create original CSS animation
 
 - Created a moving card that expands on hover.
   [x] One feature from JS list:
