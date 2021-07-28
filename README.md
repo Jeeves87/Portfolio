@@ -22,8 +22,8 @@ This is my main portfolio/project page for Code Louisville. index.html is the fo
 
 * One feature of my choice:
 
-        * Create a sticky footer
+  - Create a sticky footer
 
-        * Usage of flexbox to organize project buttons
+  - Usage of flexbox to organize project buttons
 
-        * Using CSS to hide and reveal content
+  - Using CSS to hide and reveal content
