@@ -4,24 +4,23 @@ This is my main portfolio/project page for Code Louisville. index.html is the fo
 
 **Requirements**
 
-    * 2 Media Queries that create a better layout/user experience
+- 2 Media Queries that create a better layout/user experience
 
-    * Project is uploaded to gitHub, with at least 5 commits
+- Project is uploaded to gitHub, with at least 5 commits
 
-    * Readme file which explains features used for consideration
+- Readme file which explains features used for consideration
 
-    * One feature from CSS list: - Create original CSS animation
+- One feature from CSS list: - Create original CSS animation
 
-        - Created a moving card that expands on hover.
+  - Created a moving card that expands on hover.
 
+- One feature from JS list:
 
-    * One feature from JS list:
+  - Show/hide one or more content areas with JS
 
-        * Show/hide one or more content areas with JS
+    - Uses JS to accomplish the splash screen by hiding the div after 3 seconds.
 
-             - Uses JS to accomplish the splash screen by hiding the div after 3 seconds.
-
-- One feature of my choice:
+* One feature of my choice:
 
         * Create a sticky footer
 
