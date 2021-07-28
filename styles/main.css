@@ -210,9 +210,6 @@ img {
 /* End Footer */
 /* Media Queries */
 
-/* Desktop / Nonmobile */
-
-/* Mobile */
 @media only screen and (min-device-width: 360px) {
   .top-half {
     height: 50%;
@@ -311,51 +308,6 @@ img {
     justify-items: center;
   }
 }
-
-/* @media (min-device-width: 660px) and (orientation: landscape) and (max-device-aspect-ratio: 1) {
-  body {
-    display: flex;
-  }
-
-  .app-header {
-    position: absolute;
-    top: 0;
-  }
-  .top-half {
-    height: 50vh;
-  }
-  .top-half img {
-    max-width: 100%;
-    max-height: 50vh;
-  }
-  .bottom-half {
-    height: 50vh;
-  }
-
-  /* .bottom-half p {
-    padding-bottom: 16rem;
-  } 
-  .content {
-    position: relative;
-    top: calc(100vh - 40px);
-    background-color: yellow;
-    width: 100vw;
-    flex: 1 0 21%;
-    flex-direction: row;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    margin-bottom: 0;
-  }
-
-  .bottom-half .i {
-    position: relative;
-  }
-
-  .project {
-    flex-grow: 1;
-  }
-} */
 
 @media (prefers-reduced-motion: reduce) {
   *,
